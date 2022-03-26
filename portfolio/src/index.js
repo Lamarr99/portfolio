@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './components/Navbar';
 
 ReactDOM.render(
   <React.StrictMode>
+      
     <App />
   </React.StrictMode>,
   document.getElementById('root')
@@ -15,3 +17,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+console.log('table');
