@@ -37,7 +37,7 @@ export default function Header() {
         {/* Element to display typing strings */}
         <span className="strings" ref={el}></span>
         <a href="#contact" className="btn-main-offer ">Contact me 
-        <FontAwesomeIcon className="right-arrow"  icon={ faArrowRight } style={{marginLeft:" 1rem"}} /></a>
+        <FontAwesomeIcon className="right-arrow" icon={ faArrowRight } style={{marginLeft:" 1rem"}} fade /></a>
       </div>
       </div>
 

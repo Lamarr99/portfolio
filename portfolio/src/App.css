@@ -144,9 +144,8 @@ border: 2px groove var(--primary-turquoise);
 }
 
 .btn-main-offers {
- font-size: large;
   border-radius: 0;
-  padding: 0.725rem 0.85rem  0.85rem  0.85rem;
+  padding: 1.5rem 1rem;
   color: var(--primary-white);
   text-decoration: none;
   font-weight: 500;
@@ -154,7 +153,9 @@ border: 2px groove var(--primary-turquoise);
   background-color: var(--primary-red);
   
   }
-
+.btn-main-offers:hover{
+ color: var(--primary-turquoise);
+}
 
 .about-me {
 width: fit-content;
@@ -185,31 +186,47 @@ place-items: center;
   width: fit-content;
   
 }
-.hexagon{
+
+.hexagon {
+  width: 100px;
+  height: 55px;
   position: relative;
-  width: 300px;
-height: 173.21px ;
-margin: 86.60px;
-background-color: var(--primary-turquoise);
 }
+
+.hexagon, 
+.hexagon:before, 
+.hexagon:after {
+  background: var(--primary-turquoise);
+  transform: rotate(90deg);
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.8);    */
+}
+
 .hexagon:before,
-.hexagon:after{
-content: "";
-position: absolute;
-width: 0;
-border-left: 150px solid transparent;
-border-right: 150px solid transparent;
-
+.hexagon:after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  width: 57px;
+  height: 57px;
+  transform: rotate(145deg) skew(22.5deg);
 }
-.hexagon::before{
-  bottom: 100%;
-  border-bottom: 86.60px solid var(--primary-turquoise);
-}
-.hexagon::after{
-top: 100%;
-width: 0;
-border-top: 86.60px solid var(--primary-turquoise) ;
 
+.hexagon:before {
+  top: -29px;
+}
+
+.hexagon:after {
+  top: 27px;
+}
+
+.hexagon span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 55px;
+  background: red;
+  z-index: 1;
 }
 input{
 background-color: var(--primary-black);
@@ -261,12 +278,19 @@ textarea:focus{
   background-color: var(--primary-black);
 }
 
-.list-groups  li a{
-  background-color: var(--primary-red);
+.contact-brand{
+  background-color: var(--primary-dark);
+  text-decoration: none;
   list-style: none;
-  margin: 2rem;
+  font-size: 0.8rem !important;
+  justify-content: center;
+  margin: 1.5rem 0.5rem;
+  padding: 1rem;
+  transition: all .5s ease-in-out;
 }
-
+.contact-brand:hover{
+background-color: var(--primary-red);
+}
 .footer-span{
   color: var(--primary-red);
 }

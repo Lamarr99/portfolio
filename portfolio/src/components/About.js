@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngry } from '@fortawesome/free-solid-svg-icons'
+import { faRocket , faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
 <div className='row'>
   <div className='col'>
 <div>
-<div className='hexagon '></div>
+<div className='hexagon text-center'><FontAwesomeIcon icon={ faLaptopCode } style={{color:"red"}}  /> </div>
   <h4>Responsive</h4>
   <p>My layouts will work on any device, big or small.</p>
 </div>
@@ -19,7 +19,7 @@ const About = () => {
 
   <div className='col'>
 <div>
-  <div className='hexagon '><FontAwesomeIcon className='' icon={ faAngry }/></div>
+  <div className='hexagon '><FontAwesomeIcon className='' /></div>
   <h4>Intuitive</h4>
   <p>Strong preference for easy to use,intuitive UX/UI</p>
 </div>
