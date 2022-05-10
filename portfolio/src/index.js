@@ -5,7 +5,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar';
+
+ 
+
 
 ReactDOM.render(
   <React.StrictMode>
