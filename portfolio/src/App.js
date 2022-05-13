@@ -4,19 +4,18 @@ import Navbar from "./components/Navbar";
 import Header from './components/Header';
 import ParticlesBackground from './components/ParticlesBackground';
 import About from './components/About';
-import Form from './components/Form';
+import MyForm from './components/Form';
 import Footer from './components/Footer';
-import ShapeComponent from './components/shapes';
+
 
 function App() {
  return (
    <>
-  {/* <ParticlesBackground />  */}
 
-<ShapeComponent />
-<Header /><Navbar />
+<Header />
+<Navbar />
 <About />
-<Form />
+<MyForm />
 <Footer />
 </>
   );

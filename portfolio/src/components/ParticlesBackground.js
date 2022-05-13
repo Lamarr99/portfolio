@@ -1,62 +1,131 @@
 import Particles from "react-tsparticles";
 
-const ParticlesBackground = () => {
-  return (
-    <div id="particles-js" className="App">
-        <Particles 
-            options={{
-                background: {
-                    color: "#0e387a",
+
+const  ParticlesBackground=() => {
+    return (
+      <div className="Particles">
+        <Particles
+          id="tsparticles"
+          width="100vw"
+          height="100vh"
+          options={{
+            fpsLimit: 60,
+            particles: {
+              number: {
+                value: 0,
+                density: {
+                  enable: true,
+                  value_area: 800
+                }
+              },
+              color: {
+                value: "#ffffff"
+              },
+              shape: {
+                type: "diamond"
+              },
+              opacity: {
+                value: 1,
+                random: false,
+                animation: {
+                  enable: true,
+                  speed: 0.5,
+                  minimumValue: 0,
+                  sync: false
+                }
+              },
+              size: {
+                value: 10,
+                random: { enable: true, minimumValue: 4 },
+                animation: {
+                  enable: false,
+                  speed: 20,
+                  minimumValue: 4,
+                  sync: false
+                }
+              },
+              move: {
+                enable: true,
+                gravity: {
+                  enable: true,
+                  acceleration: -0.1
                 },
-                fpsLimit: 60,
-                interactivity: {
-                    detectsOn: "canvas",
-                    events: {
-                        resize: true
-                    },
+                speed: 1.5,
+                direction: "top",
+                random: false,
+                straight: false,
+                outModes: {
+                  default: "destroy",
+                  bottom: "none"
                 },
+                attract: {
+                  enable: true,
+                  distance: 300,
+                  rotate: {
+                    x: 600,
+                    y: 1200
+                  }
+                }
+              }
+            },
+            interactivity: {
+              detectsOn: "canvas",
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: "push"
+                },
+                onHover: {
+                  enable: true,
+                  mode: "repulse"
+                },
+                resize: true
+              },
+              modes: {
+                bubble: {
+                  distance: 400,
+                  duration: 2,
+                  opacity: 0.8,
+                  size: 40
+                },
+                push: {
+                  quantity: 4
+                },
+                repulse: {
+                  distance: 100,
+                  duration: 0.4
+                }
+              }
+            },
+            detectRetina: true,
+            background: {
+              color: "#000000"
+            },
+            emitters: [
+              {
+                direction: "top",
                 particles: {
-                    color: {
-                        value: "9fafca"
-                    },
-                    number: {
-
-                        density: {
-                            enable: true,
-                            area: 1080
-                        },
-                        limit: 0,
-                        value: 400,
-                    },
-                    opacity: {
-                        animation: {
-                            enable: true,
-                            minimumValue: 0.05,
-                            speed: 1,
-                            sync: false
-                        },
-                        random: {
-                            enable: true,
-                            minimumValue: 0.05,
-                        },
-                        value: 1
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        random: {
-                            enable: true,
-                            minimumValue: 0.5,
-                        },
-                        value: 1
-                    },
+                  color: "#f7d488"
                 },
-
-            }}
+                rate: {
+                  quantity: 1,
+                  delay: 0.1
+                },
+                size: {
+                  width: 100,
+                  height: 10
+                },
+                position: {
+                  x: 50,
+                  y: 100
+                }
+              }
+            ]
+          }}
         />
-    </div>
-  )
-}
+      </div>
+    );
+  }
+  
 
-export default ParticlesBackground
+  export default ParticlesBackground

@@ -3,6 +3,7 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import ParticlesBackground from "./ParticlesBackground";
 
 export default function Header() {
 
@@ -11,14 +12,14 @@ export default function Header() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-    strings: [ " I'm a Frontend Web Developer.", "I build interactive Web Apps"] ,
+    strings: [ "I'm a Frontend Developer.", "I design stunning responsive websites"] ,
     // Strings to display
       // Speed settings, try different values untill you get good results
       startDelay: 250,
-      typeSpeed: 100,
+      typeSpeed: 80,
       backSpeed: 100,
-      backDelay: 120,
-    loop: true
+      backDelay: 100,
+      loop:true
     });
 
     return () => {
@@ -29,34 +30,29 @@ export default function Header() {
 
 
     return (
-      <div  className="header-wrapper">
+      <>
+      
+      <div  className="header-wrapper bg-dark">
+         
           <div className="main-info m-3">
-        <h3 className="main-text">Hello👋, I'm <span className="my-name">Tony Osijo</span>.<br />
-        {/* I'm a Frontend Web Developer. */}
-        </h3><br />
-        {/* Element to display typing strings */}
+        <h3 className="main-text">Hello👋, I'm <span className="my-name text-info">Tony Osijo</span>.
+        
+        </h3>
+      
+
         <span className="strings" ref={el}></span>
+
         <a href="#contact" className="btn-main-offer ">Contact me 
         <FontAwesomeIcon className="right-arrow" icon={ faArrowRight } style={{marginLeft:" 1rem"}} fade /></a>
       </div>
+      {/* <ParticlesBackground className='particles' /> */}
       </div>
+
+      </>
 
       
     );
   }
 
-// const Header = () => {
-//   return (
-//     <div className="header-wrapper">
-//         <div className="main-info">
-
-//     <h1>Web development</h1>
-//     <Typed/>
-//     </div>
-
-//     </div>
-
-//   )
-// }
-
-// export default Header
+  
+       
